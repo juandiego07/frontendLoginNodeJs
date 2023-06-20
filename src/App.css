@@ -1,4 +1,239 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&family=Roboto:wght@300;400;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url("./assests/body.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-box {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box-l {
+  width: 400px;
+  height: 450px;
+}
+
+.form-box-r {
+  width: 400px;
+  height: 550px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  margin: 20px 0;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -3px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 25px 0 5px;
+  color: #fff;
+}
+
+.input-box select {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #fff;
+}
+
+.input-box ion-icon {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.radio-box {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.radio-box div input {
+  margin: 0 10px 0 10px;
+}
+
+.labelRole {
+  position: relative;
+  color: #fff;
+  left: 5px;
+}
+
+.toastMessage {
+  color: #000;
+  font-size: 1em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  transition: 0.3s;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.textBotton {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 0.9em;
+}
+.textBotton span {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.table th h1 {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+  color: #fb667a; /*185875*/
+}
+
+.table td {
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0e1119;
+  -moz-box-shadow: 0 2px 2px -2px #0e1119;
+  box-shadow: 0 2px 2px -2px #0e1119;
+  color: #ffffff
+}
+
+.table {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.table td,
+.table th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.table tr:nth-child(odd) {
+  background-color: #323c50;
+}
+
+/* Background-color of the even rows */
+.table tr:nth-child(even) {
+  background-color: #2c3446; /*2c3446*/
+}
+
+.table th {
+  background-color: #1f2739;
+}
+
+.table td:first-child {
+  color: #fb667a;
+}
+
+.table tr:hover {
+  background-color: #464a52;
+  -webkit-box-shadow: 0 6px 6px -6px #0e1119;
+  -moz-box-shadow: 0 6px 6px -6px #0e1119;
+  box-shadow: 0 6px 6px -6px #0e1119;
+}
+
+/* .table td:hover {
+  background-color: #fff842;
+  color: #403e10; 
+  font-weight: bold;
+
+  box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
+    #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+} */
+
+@media (max-width: 800px) {
+  .table td:nth-child(4),
+  .table th:nth-child(4) {
+    display: none;
+  }
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +270,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
